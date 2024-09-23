@@ -1,0 +1,172 @@
+<% layout("/layouts/boilerplate")%>
+
+<style>
+    #filters {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        
+    }
+    .filter {
+        text-align: center;
+        margin-right: 1rem;
+        opacity: 0.76;  
+        margin-top: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    .filter:hover {
+        cursor:pointer;
+        opacity: 1;  
+    }    
+    .tax-info{
+        display:none;
+    }
+    .tax-toggle{
+        border:0.1px rgb(202, 198, 198) solid;
+        border-radius: 1rem;;
+        height:3rem;
+        padding:0.6rem;
+        width:auto;
+        font-size:18px;
+      
+    }
+    .form-check-input:checked {
+        background-color: #fe424d; /* Green color for the checked state */
+        border-color: #fe424d;
+      }
+
+     
+      @media (max-width: 576px) {
+        /* For small devices, we reduce the size */
+        .icon-responsive {
+          font-size: 0.8rem; /* Much smaller size for small devices */
+        }
+      }
+     
+</style>
+
+    <div id="filters" >
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter ">
+                <div><i class="fa-solid fa-fire icon-responsive"></i></div>
+                <p class="icon-responsive">Trending</p>
+                <input type="hidden" name="type" value="Trending" >
+            </div>
+        </form>    
+    
+        <form method="post" action="/typeof" class="submit-form-class">
+        <div class="filter ">
+            <div><i class="fa-solid fa-bed icon-responsive"></i></div>
+            <p class="icon-responsive">Rooms</p>
+            <input type="hidden" name="type" value="Rooms" >
+        </div>
+        </form>
+    
+        <form method="post" action="/typeof" class="submit-form-class">
+        <div class="filter ">
+            <div><i class="fa-solid fa-mountain icon-responsive" ></i> </div>
+            <p class="icon-responsive"> Mountainous</p>
+            <input type="hidden" name="type" value="Mountainous" >
+    
+        </div>
+        </form>
+    
+        <form method="post" action="/typeof" class="submit-form-class">
+        <div class="filter ">
+            <div><i class="fa-solid fa-umbrella-beach icon-responsive" ></i></div>
+            <p class="icon-responsive" >Beaches</p>
+            <input type="hidden" name="type" value="Beaches" >
+    
+        </div>
+        </form>
+    
+        <form method="post" action="/typeof" class="submit-form-class">
+        <div class="filter ">
+            <div><i class="fa-solid fa-city icon-responsive" ></i> </div>
+            <p class="icon-responsive">Apartments</p>
+            <input type="hidden" name="type" value="Apartments" >
+    
+        </div>
+        </form>
+    
+        <form method="post" action="/typeof" class="submit-form-class">
+        <div class="filter ">
+            <div><i class="fa-solid fa-leaf icon-responsive"></i></div>
+            <p class="icon-responsive">Eco-friendly</p>
+            <input type="hidden" name="type" value="Eco-friendly" >
+    
+        </div>
+        </form>
+        
+        <form method="post" action="/typeof" class="submit-form-class">
+        <div class="filter ">
+            <div><i class="fa-solid fa-gem icon-responsive" ></i></div>
+            <p class="icon-responsive">Luxury</p>
+            <input type="hidden" name="type" value="Luxury" >
+    
+        </div>
+        </form>
+    
+        <form method="post" action="/typeof" class="submit-form-class">
+        <div class="filter">
+            <div><i class="fa-solid fa-paw icon-responsive "></i></div>
+            <p class="icon-responsive"> Pet-Friendly</p>
+            <input type="hidden" name="type" value="Pet-Friendly" >
+        </div>
+</form>
+    
+        <div class="form-check-reverse form-switch tax-toggle icon-responsive">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Total(includes taxes)</label>
+        </div>
+       
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <%for(let listing of allListings){%>
+            <a href="/listings/<%=listing._id%>" class="listing-link">
+                <div class="card">
+                    
+                    <img src="<%=listing.image%>" class="card-img-top" alt="listing-image" style="height: 15rem;">
+                    <div class="card-img-overlay"> </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                           <b><%=listing.title%> <br></b> 
+                           &#36;<%=listing.price.toLocaleString("en-IN")%>/night
+                            &nbsp<i class="tax-info">+18% Tax</i></p>
+                           
+                        </p>
+                    </div>
+                  </div>
+            </a>
+        <%}%>
+    </div>
+
+<script>
+    let taxswitch=document.getElementById("flexSwitchCheckDefault");
+    taxswitch.addEventListener("click",()=>{
+        let taxinfo=document.getElementsByClassName("tax-info");
+        console.log("working");
+        for(let info of taxinfo){
+            if(taxswitch.checked){
+                info.style.display="inline";
+            }
+            else{
+                info.style.display="none";
+            }
+        }
+    });
+    
+    
+    // Select all the filters
+    document.querySelectorAll('.filter').forEach(filter => {
+    // Add click event listener to each filter
+    filter.addEventListener('click', function() {
+        // Submit the form associated with the clicked filter
+        this.closest('form').submit();
+    });
+});
+
+
+
+</script>
