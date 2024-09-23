@@ -102,7 +102,19 @@ margin-bottom: 2rem;
 .btns{
     display: flex;
 }
-.review-card{
-    border:solid 1px rgb(177, 177, 177) !important;
-    border-radius: 15px;
-}
+.review-card {
+    border: solid 1px rgb(177, 177, 177) !important;
+    border-radius: 15px; /* Default border radius for larger screens */
+    width: auto; /* Default width for larger screens */
+    height: auto; /* Default height for larger screens */
+  }
+  
+  /* For small devices, adjust width, height, and border radius */
+  @media (max-width: 576px) {
+    .review-card {
+      border-radius: 0 !important; /* Remove border radius to make the card rectangular */
+      width: 90% !important; /* Set width to 90% */
+      height: auto !important; /* Allow height to adjust according to content */
+    }
+  }
+  
