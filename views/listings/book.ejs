@@ -20,18 +20,21 @@
             <label for="location" class="form-label">Location</label>
             <input name="listing[location]" value="<%=listing.location %>"  type="text" class="form-control" readonly>
         </div>
-
-
     </form>
+
+
+    <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button class="mb-2 col-lg-6 offset-lg-3"
+  buy-button-id="buy_btn_1Q2QNoP81GkQXoEbjWs8S86M"
+  publishable-key="pk_test_51Q247XP81GkQXoEbL7N7cHUXxejGt8mmUhB7V5Jhff6tXntnNh03NesnT83CHH8qs0tEL6bEEKfu3bEhcUwNkDJc00p00QMfq8"
+>
+</stripe-buy-button>
     </div>
 </div>
 
-<style>.pp-7BBCXX3Q3YMV8{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
-<form action="https://www.paypal.com/ncp/payment/7BBCXX3Q3YMV8" method="post" target="_top" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;margin-top:20px;margin-bottom:30px">
-  <input class="pp-7BBCXX3Q3YMV8" type="submit" value="Pay Now" />
-  <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
-  <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-</form>
 
 <hr>
 
