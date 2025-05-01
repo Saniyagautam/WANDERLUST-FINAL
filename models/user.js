@@ -13,7 +13,12 @@ const userSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: "Listing" // or "Hotel" depending on your model name
         }
-    ]
+    ],
+    //change
+    reservations: [{
+        type: Schema.Types.ObjectId,
+        ref: "Listing"
+    }],
 });
 
 userSchema.plugin(passportLocalMongoose); // adds username, hash, salt, etc.

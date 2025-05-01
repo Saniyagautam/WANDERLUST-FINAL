@@ -154,6 +154,8 @@ app.use('/dashboard', dashboardRoutes);
 const wishlistroutes = require('./routes/wishlist');
 app.use('/wishlist', wishlistroutes);
 
+
+
 //for routes not defined
 app.all("*",(req,res,next)=>{
     next(new expressError(404,"Page not Found!!!"));

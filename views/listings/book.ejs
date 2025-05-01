@@ -1,42 +1,79 @@
-<% layout("/layouts/boilerplate")%>
+<% layout("/layouts/boilerplate") %>
 
 <div class="row mt-3"></div>
-    <div class="col-8 offset-2">
-        <h3>Book your Space</h3>
-    <form>
+<div class="col-8 offset-2">
+    <h3>Book your Space</h3>
+    <form method="POST" action="/book-reservation"> <!-- Update action to your backend route -->
         <div class="mb-2">
-            <label for="title" class="form-label">Title</label>
-            <input name="listing[title]"  value="<%=listing.title %>"  type="text" class="form-control" readonly>
-          
+            <label for="title" class="form-label">Destination</label>
+            <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" readonly>
         </div>
 
-
-        <div class="mb-2 ">
-            <label for="price" class="form-label ">Price</label>
-            <input name="listing[price]" value="<%=listing.price %>"  type="number" class="form-control" readonly>
-        </div>
-    
-        <div class="mb-2 ">
+        <div class="mb-2">
             <label for="location" class="form-label">Location</label>
-            <input name="listing[location]" value="<%=listing.location %>"  type="text" class="form-control" readonly>
+            <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" readonly>
         </div>
-    </form>
 
+        <div class="mb-2">
+            <label for="fromDate" class="form-label">From</label>
+            <input name="reservation[fromDate]" type="date" class="form-control" required>
+        </div>
 
-    <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
+        <div class="mb-2">
+            <label for="toDate" class="form-label">To</label>
+            <input name="reservation[toDate]" type="date" class="form-control" required>
+        </div>
 
-<stripe-buy-button class="mb-2 col-lg-6 offset-lg-3"
-  buy-button-id="buy_btn_1Q2QNoP81GkQXoEbjWs8S86M"
-  publishable-key="pk_test_51Q247XP81GkQXoEbL7N7cHUXxejGt8mmUhB7V5Jhff6tXntnNh03NesnT83CHH8qs0tEL6bEEKfu3bEhcUwNkDJc00p00QMfq8"
->
-</stripe-buy-button>
-    </div>
-</div>
-
-
-<hr>
-
+        <div class="mb-2">
+            <label for="totalPrice" class="form-label">Total Price</label>
+            <input name="reservation[totalPrice]" id="totalPrice" type="number" class="form-control" readonly>
+        </div>
 
      
+    </form>
+
+    <script>
+        // Calculate total price dynamically when dates are selected
+        const fromDateInput = document.querySelector('input[name="reservation[fromDate]"]');
+        const toDateInput = document.querySelector('input[name="reservation[toDate]"]');
+        const totalPriceInput = document.getElementById('totalPrice');
+        const pricePerNight = <%= listing.price %>;  // Get the price per night from the backend
+
+        fromDateInput.addEventListener('change', calculateTotalPrice);
+        toDateInput.addEventListener('change', calculateTotalPrice);
+
+        function calculateTotalPrice() {
+            const fromDate = new Date(fromDateInput.value);
+            const toDate = new Date(toDateInput.value);
+            const timeDiff = toDate - fromDate;
+
+            if (timeDiff > 0) {
+                const days = timeDiff / (1000 * 3600 * 24); // Convert time difference to days
+                const totalPrice = days * pricePerNight;  // Calculate the total price
+                totalPriceInput.value = totalPrice.toFixed(2); // Show the calculated total price
+            } else {
+                totalPriceInput.value = ''; // Reset the total price if the dates are invalid
+            }
+        }
+    </script>
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+<p id="priceDisplay" class="text-center fw-bold fs-5 mt-3"></p>
+
+<!-- Corrected stripe-buy-button with attributes properly placed -->
+<stripe-buy-button 
+  buy-button-id="buy_btn_1Q2QNoP81GkQXoEbjWs8S86M"
+  publishable-key="pk_test_51Q247XP81GkQXoEbL7N7cHUXxejGt8mmUhB7V5Jhff6tXntnNh03NesnT83CHH8qs0tEL6bEEKfu3bEhcUwNkDJc00p00QMfq8"
+  class="mb-2 col-lg-6 offset-lg-3">
+</stripe-buy-button>
+
+<!-- Stripe.js library -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+
+
+</div>
+</div>
+
+<hr>

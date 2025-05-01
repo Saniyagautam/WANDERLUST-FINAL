@@ -47,7 +47,7 @@
 </style>
 
   
-
+<!-- 
     <div id="filters" >
         <form method="post" action="/typeof" class="submit-form-class">
             <div class="filter ">
@@ -116,12 +116,91 @@
             <p class="icon-responsive"> Pet-Friendly</p>
             <input type="hidden" name="type" value="Pet-Friendly" >
         </div>
-</form>
-    
-        <div class="form-check-reverse form-switch tax-toggle icon-responsive">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Total(includes taxes)</label>
+</form> -->
+<!-- Hamburger Icon Button to Toggle the Filter Sidebar -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#filterMenu" aria-controls="filterMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- Collapsible Filter Sidebar -->
+<div class="collapse" id="filterMenu">
+    <div id="filters" class="p-3">
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter">
+                <div><i class="fa-solid fa-fire icon-responsive"></i></div>
+                <p class="icon-responsive">Trending</p>
+                <input type="hidden" name="type" value="Trending">
+            </div>
+        </form>
+
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter">
+                <div><i class="fa-solid fa-bed icon-responsive"></i></div>
+                <p class="icon-responsive">Rooms</p>
+                <input type="hidden" name="type" value="Rooms">
+            </div>
+        </form>
+
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain icon-responsive"></i></div>
+                <p class="icon-responsive">Mountainous</p>
+                <input type="hidden" name="type" value="Mountainous">
+            </div>
+        </form>
+
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter">
+                <div><i class="fa-solid fa-umbrella-beach icon-responsive"></i></div>
+                <p class="icon-responsive">Beaches</p>
+                <input type="hidden" name="type" value="Beaches">
+            </div>
+        </form>
+
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter">
+                <div><i class="fa-solid fa-city icon-responsive"></i></div>
+                <p class="icon-responsive">Apartments</p>
+                <input type="hidden" name="type" value="Apartments">
+            </div>
+        </form>
+
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter">
+                <div><i class="fa-solid fa-leaf icon-responsive"></i></div>
+                <p class="icon-responsive">Eco-friendly</p>
+                <input type="hidden" name="type" value="Eco-friendly">
+            </div>
+        </form>
+
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter">
+                <div><i class="fa-solid fa-gem icon-responsive"></i></div>
+                <p class="icon-responsive">Luxury</p>
+                <input type="hidden" name="type" value="Luxury">
+            </div>
+        </form>
+
+        <form method="post" action="/typeof" class="submit-form-class">
+            <div class="filter">
+                <div><i class="fa-solid fa-paw icon-responsive"></i></div>
+                <p class="icon-responsive">Pet-Friendly</p>
+                <input type="hidden" name="type" value="Pet-Friendly">
+            </div>
+        </form>
+        <div>
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Total(includes taxes)</label>
         </div>
+        
+    </div>
+    
+</div>
+
+
+
+
+        
         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
         <%for(let listing of allListings){%>
             <a href="/listings/<%=listing._id%>" class="listing-link">
