@@ -12,6 +12,13 @@ module.exports.isLoggedIn=(req,res,next)=>{
     }
     next();
 }
+module.exports.isLoggedIn = (req, res, next) => {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect("/login");
+};
+
 //after logged in,to go back to same page from where user came from 
 module.exports.saveRedirecturl=(req,res,next)=>{
     if(req.session.redirectUrl){

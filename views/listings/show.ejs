@@ -42,12 +42,13 @@
         <p class="card-text mb-1"><%=listing.location%></p>
         <p class="card-text mb-1"><%=listing.country%></p>
         <p class="card-text mb-1"><%=listing.type%></p>
-        
+       
     </div> 
-    <p class="card-text  "><%=listing.description%></p>
-   
+    <p class="card-text "><%=listing.description%></p>
+        <form method="POST" action="/wishlist/add/<%= listing._id %>">
+          <button class="btn btn-outline-danger mb-3">❤️ Wishlist</button>
+        </form> 
 
-    </div>
 </div>
 <!-- SHOE BTN ONLY IF USER IS THE OWNER OF LISTING -->
 <%if(currUser && listing.owner._id.equals(currUser._id)){%>
@@ -62,7 +63,7 @@
 <%}%>
 
 <form method="get" action="/book/<%=listing._id%>">
-    <button class="btn btn-dark offset-3 ">Reserve</button>
+    <button class="btn btn-dark offset-3 mb-2 ">Reserve</button>
 </form>
 
 <hr>

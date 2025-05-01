@@ -37,8 +37,17 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+        <a class="navbar-brand ms-2 me-4" href="/listings"> <i class="fa-solid fa-house"></i></a>
+
+                 <!-- change -->
+       <% if (currUser) { %>
+        <a href="/dashboard" class="nav-link"><b>Dashboard </b><i class="fa-solid fa-user acc"></i></a>
+      <% } %>
+  
+
         <div class="navbar-nav ms-auto">
           <form class="d-flex me-5" role="search" method="post" action="/search">
             <input class="form-control me-2 search-input" type="search" placeholder="Search Destinations" aria-label="Search" name="title">
@@ -49,16 +58,17 @@
   
           <% if (!currUser) { %>
             <a class="nav-link" href="/signup"><b>Sign up</b></a>
-            <a class="nav-link" href="/login"><b>Log in</b><i class="fa-solid fa-user acc"></i></a>
+            <a class="nav-link" href="/login"><b>Log in</b></a>
           <% } %>
           <% if (currUser) { %>
-            <a class="nav-link" href="/logout"><b>Log out</b><i class="fa-solid fa-user acc"></i></a>
+            <a class="nav-link" href="/logout"><b>Log out</b></a>
           <% } %>
-  
-         
+
           <div class="form-check form-switch d-flex align-items-center gap-0 ms-0 ms-md-3 ">
             <input class="form-check-input" type="checkbox" id="darkModeSwitch">
             <label class="form-check-label" for="darkModeSwitch">🌙Dark Theme</label>
+
+    
           </div>
           
         </div>

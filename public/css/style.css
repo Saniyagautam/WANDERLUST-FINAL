@@ -323,7 +323,8 @@ body.dark-mode {
   body.dark-mode .container-fluid,
   body.dark-mode .f-info,
   body.dark-mode .card,
-  body.dark-mode .modal-content {
+  body.dark-mode .modal-content,
+  body.dark-mode .card-title{
     background-color: #1e1e1e !important;
     color: white !important;
   }
