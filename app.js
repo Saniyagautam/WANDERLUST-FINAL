@@ -91,12 +91,14 @@ app.use((req,res,next)=>{
 
 // ROUTERS
 
-app.use("/listings",listings);
-app.use("/listings/:id/reviews",reviews);
+
 //change1
 app.get("/", (req, res) => {
     res.render("hero");
 });
+app.use("/listings",listings);
+app.use("/listings/:id/reviews",reviews);
+
 app.use("/", user);
 
 
