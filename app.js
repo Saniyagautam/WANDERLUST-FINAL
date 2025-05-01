@@ -93,8 +93,11 @@ app.use((req,res,next)=>{
 
 app.use("/listings",listings);
 app.use("/listings/:id/reviews",reviews);
-app.use("/",user);
-
+//change1
+app.get("/", (req, res) => {
+    res.render("hero");
+});
+app.use("/", user);
 
 
 //SEARCH ROUTE

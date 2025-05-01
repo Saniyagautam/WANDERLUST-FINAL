@@ -46,6 +46,8 @@
      
 </style>
 
+  
+
     <div id="filters" >
         <form method="post" action="/typeof" class="submit-form-class">
             <div class="filter ">
@@ -120,9 +122,7 @@
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
             <label class="form-check-label" for="flexSwitchCheckDefault">Total(includes taxes)</label>
         </div>
-       
-
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
         <%for(let listing of allListings){%>
             <a href="/listings/<%=listing._id%>" class="listing-link">
                 <div class="card">
@@ -166,7 +166,5 @@
         this.closest('form').submit();
     });
 });
-
-
 
 </script>

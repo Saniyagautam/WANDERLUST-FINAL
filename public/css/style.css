@@ -84,8 +84,7 @@ margin-bottom: 2rem;
 /* New Page */
 .add-btn{
     background-color:#fe424d!important;
-    border:none !important;
-    
+    border:none !important; 
 }
 
 /* Edit page */
@@ -116,5 +115,244 @@ margin-bottom: 2rem;
       width: 90% !important; /* Set width to 90% */
       height: auto !important; /* Allow height to adjust according to content */
     }
+  }
+  
+/* change */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 1s ease-in-out; /* Smooth background change transition */
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Add a semi-transparent overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    line-height: 1.6;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    background-color: #fe424d;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: grey;
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style for the links */
+.hero .links {
+    margin-top: 40px;
+}
+
+.hero .links a {
+    color: #fff; /* Matching the button color */
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.hero .links a:hover {
+    background-color: #fe424d;
+    color: white;
+}
+
+.hero .links a:active {
+    transform: translateY(1px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .btn-primary {
+        padding: 13px 28px;
+        font-size: 1.1rem;
+    }
+
+    .hero-content {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .hero .links a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
+        max-width: 95%;
+    }
+
+    .hero .links a {
+        font-size: 0.9rem;
+        margin: 0 8px;
+    }
+}
+
+
+/* Dark-themed switch */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dark mode styles for major Bootstrap components */
+  body.dark-mode .navbar,
+  body.dark-mode .container-fluid,
+  body.dark-mode .f-info,
+  body.dark-mode .card,
+  body.dark-mode .modal-content {
+    background-color: #1e1e1e !important;
+    color: white !important;
+  }
+  
+  body.dark-mode .nav-link,
+  body.dark-mode .navbar-brand {
+    color: #f1f1f1 !important;
+  }
+  
+  body.dark-mode footer a,
+  body.dark-mode a {
+    color: #ffffff !important;
+  }
+  
+  body.dark-mode a:hover {
+    color: #ffffff !important;
+  }
+ 
+  #darkModeSwitch:checked {
+    background-color: #fe424d;
+    border-color: #fe424d;
+  }
+  
+  #darkModeSwitch:checked::before {
+    background-color: white;
+  }
+  
+  /* Hamburger icon color in dark mode */
+  body.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
   
