@@ -60,8 +60,31 @@ http://localhost:8080
 **🔄 Booking Cancellation & Refunds:**  
 - Implement a system to allow users to cancel bookings with refund options based on the cancellation policy.  
 
-##**Snapshots**
+## 📸 **Visual Walkthrough**
 
+### 🏠 Home Page  
+<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Home%20page.png?raw=true" width="500"/>
+
+### 🔐 Login Page  
+<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Login%20Page.png?raw=true" width="500"/>
+
+### 📃 Index Page  
+<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Index%20Page.png?raw=true" width="500"/>
+
+### 🏨 Show Page *(Same as Payment, shown twice above)*  
+<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Payment%20Page.png?raw=true" width="500"/>
+
+### ⭐ Reviews Page  
+<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Reviews%20Page.png?raw=true" width="500"/>
+
+### 🧑‍💼 Dashboard Page  
+<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Dashboard%20Page.png?raw=true" width="500"/>
+
+### 📅 Reserve Page  
+<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Reserve%20Page.png?raw=true" width="500"/>
+
+### 💳 Payment Page  
+<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Payment%20Page.png?raw=true" width="500"/>
 
 ## 👤 **Author**
 **Name:** Saniya Gautam  
