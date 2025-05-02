@@ -44,31 +44,7 @@ nodemon app.js
 4.Visit 
 http://localhost:8080
 
-## **Screenshots**
-
-### 🏠 **Homepage**
-![Homepage](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/homepage.jpg?raw=true)
-
-### 🔐 **Login Page**
-![Login Page](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/login-page.jpg?raw=true)
-
-### 📃 **Index Page**
-![Index Page](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/index-page.jpg?raw=true)
-
-### 🏨 **Show Page**
-![Show Page](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/show-page.jpg?raw=true)
-
-### ⭐ **Reviews Page**
-![Reviews Page](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/reviews-page.jpg?raw=true)
-
-### 🧑‍💼 **Dashboard**
-![Dashboard](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/dashboard.jpg?raw=true)
-
-### 📅 **Reserve**
-![Reserve](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/reserve.jpg?raw=true)
-
-### 💳 **Payment**
-![Payment](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/payment.jpg?raw=true)
+## **Snapshots**
 
 ## **Future Enhancements**
 - 🌐 Multi-language support
