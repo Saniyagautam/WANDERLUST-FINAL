@@ -42,6 +42,47 @@
         </div>
     <% } %>
 </div>
+
+<!-- Hosted Listings Section -->
+<h4 class="text-center mb-4 text-primary ">Your Hosted Listings 🏡</h4>
+<% if (hostedListings.length === 0) { %>
+    <p class="text-center">You haven't hosted any listings yet.</p>
+<% } else { %>
+    <div class="row">
+        <% hostedListings.forEach(listing => { %>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100" style="width: 20rem;">
+                    <!-- Image Section -->
+                    <img src="<%= listing.image %>" class="card-img-top img-fluid" alt="listing_image" style="object-fit: cover; height: 200px;">
+
+                    <div class="card-body">
+                        <!-- Title and Location -->
+                        <h5 class="card-title"><%= listing.title %></h5>
+                        <p class="card-title mb-1 text-muted"><%= listing.location %>, <%= listing.country %></p>
+
+                        <!-- Price -->
+                        <p class="card-title mb-1 text-muted">&#36;<%= listing.price.toLocaleString("en-IN") %>/night</p>
+
+                        <!-- Description -->
+                        <p class="card-text mb-3"><%= listing.description.substring(0, 80) %>...</p>
+
+                        <!-- Edit and Delete buttons -->
+                        <div class="d-flex justify-content-between">
+                            <!-- Edit Button -->
+                            <a href="/listings/<%= listing._id %>/edit" class="btn btn-info" style="width: 48%;">Edit</a>
+                            
+                            <!-- Delete Form -->
+                            <form method="post" action="/listings/<%= listing._id %>/?_METHOD=Delete" style="width: 48%;">
+                                <button type="submit" class="btn btn-danger w-100" onclick="return confirm('Are you sure you want to delete this listing?');">Delete</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+<% } %>
 <!-- Reserved Hotels Section -->
 <h4 class="text-center mb-4 text-success">Your Reserved Hotels 🏨</h4>
 <% if (user.reservations.length === 0) { %>
