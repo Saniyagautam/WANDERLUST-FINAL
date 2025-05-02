@@ -44,19 +44,39 @@ nodemon app.js
 4.Visit 
 http://localhost:8080
 
-##**Screenshots**
-<h4><strong>🏠 Homepage</strong></h4> <img src="https://github.com/user-attachments/assets/39eef730-1d8b-462e-927f-35a877fd8f82" width="500"/> <h4><strong>🔐 Login Page</strong></h4> <img src="https://github.com/user-attachments/assets/10db7823-021e-4598-9bb6-f0f1ccc07747" width="500"/> <h4><strong>📃 Index Page</strong></h4> <img src="https://github.com/user-attachments/assets/9fb33bfd-8563-445b-a4c6-b65eaf65c158" width="500"/> <h4><strong>🏨 Show Page</strong></h4> <img src="https://github.com/user-attachments/assets/b36ac82e-b96e-40ba-baeb-5f340d980c38" width="500"/> <h4><strong>⭐ Reviews Page</strong></h4> <img src="https://github.com/user-attachments/assets/b6664053-bab3-4d7e-b71d-5daab2908980" width="500"/> <h4><strong>🧑‍💼 Dashboard</strong></h4> <img src="https://github.com/user-attachments/assets/527b5fc7-a9a4-4482-9868-576659988899" width="500"/> <h4><strong>📅 Reserve</strong></h4> <img src="https://github.com/user-attachments/assets/663d0d2d-0c93-425c-861c-fe86174acee4" width="500"/> <h4><strong>💳 Payment</strong></h4> <img src="https://github.com/user-attachments/assets/170a47f3-90d0-432a-8084-e62898c13605" width="500"/>
+## **Screenshots**
 
-##**Future Enhancements**
-🌐 Multi-language support
+### 🏠 **Homepage**
+![Homepage](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/homepage.jpg?raw=true)
 
-🗺️ Map integration for property locations
+### 🔐 **Login Page**
+![Login Page](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/login-page.jpg?raw=true)
 
-📧 Email confirmation and notifications
+### 📃 **Index Page**
+![Index Page](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/index-page.jpg?raw=true)
 
-🛎️ Advanced booking management for hosts
+### 🏨 **Show Page**
+![Show Page](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/show-page.jpg?raw=true)
 
-##**👤 Author**
+### ⭐ **Reviews Page**
+![Reviews Page](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/reviews-page.jpg?raw=true)
+
+### 🧑‍💼 **Dashboard**
+![Dashboard](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/dashboard.jpg?raw=true)
+
+### 📅 **Reserve**
+![Reserve](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/reserve.jpg?raw=true)
+
+### 💳 **Payment**
+![Payment](https://github.com/your-username/your-repository-name/blob/main/path-to-your-image/payment.jpg?raw=true)
+
+## **Future Enhancements**
+- 🌐 Multi-language support
+- 🗺️ Map integration for property locations
+- 📧 Email confirmation and notifications
+- 🛎️ Advanced booking management for hosts
+
+## **👤 Author**
 Saniya Gautam
 
 
