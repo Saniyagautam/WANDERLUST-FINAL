@@ -30,18 +30,17 @@ Wanderlust is a full-stack hotel booking platform that allows users to search, r
 - Database: MongoDB Atlas  
 
 ## ⚙️ **Installation**
-
-1. Clone the repository:  
+Clone the repository:  
 ```bash
 git clone https://github.com/Saniyagautam/WANDERLUST-FINAL.git
 
-2. Install Dependencies
+Install Dependencies
 npm install
 
-3.Start the server
+Start the server
 nodemon app.js
 
-4.Visit 
+Visit 
 http://localhost:8080
 
 ## **Snapshots**
