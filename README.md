@@ -30,35 +30,17 @@ Wanderlust is a full-stack hotel booking platform that allows users to search, r
 - Database: MongoDB Atlas  
 
 ## ⚙️ **Installation**
-Clone the repository:  
+1.Clone the repository:  
 git clone https://github.com/Saniyagautam/WANDERLUST-FINAL.git
 
-Install Dependencies
+2.Install Dependencies
 npm install
 
-Start the server
+3.Start the server
 nodemon app.js
 
-Visit 
+4.Visit 
 http://localhost:8080
-
-
-## 🛠️ **Future Enhancements**
-
-**🌐 Multi-Language Support:**  
-- Implement multi-language options to make the platform accessible to a global audience.  
-
-**🗺️ Map Integration:**  
-- Integrate maps to show the exact location of listed properties, allowing users to easily explore hotels in specific areas.  
-
-**📧 Email Notifications:**  
-- Send confirmation emails upon booking, reservation changes, and host updates.  
-
-**💬 Real-Time Chat:**  
-- Allow users and hosts to communicate in real-time to address queries before making a booking.  
-
-**🔄 Booking Cancellation & Refunds:**  
-- Implement a system to allow users to cancel bookings with refund options based on the cancellation policy.  
 
 ## 📸 **Visual Walkthrough**
 
@@ -82,6 +64,26 @@ http://localhost:8080
 
 ### 💳 Payment Page  
 <img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Payment%20Page.png?raw=true" width="500"/>
+
+
+## 🛠️ **Future Enhancements**
+
+**🌐 Multi-Language Support:**  
+- Implement multi-language options to make the platform accessible to a global audience.  
+
+**🗺️ Map Integration:**  
+- Integrate maps to show the exact location of listed properties, allowing users to easily explore hotels in specific areas.  
+
+**📧 Email Notifications:**  
+- Send confirmation emails upon booking, reservation changes, and host updates.  
+
+**💬 Real-Time Chat:**  
+- Allow users and hosts to communicate in real-time to address queries before making a booking.  
+
+**🔄 Booking Cancellation & Refunds:**  
+- Implement a system to allow users to cancel bookings with refund options based on the cancellation policy.  
+
+
 
 ## 👤 **Author**
 **Name:** Saniya Gautam  
