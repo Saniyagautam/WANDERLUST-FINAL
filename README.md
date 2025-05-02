@@ -71,9 +71,6 @@ http://localhost:8080
 ### 📃 Index Page  
 <img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Index%20Page.png?raw=true" width="500"/>
 
-### 🏨 Show Page *(Same as Payment, shown twice above)*  
-<img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Payment%20Page.png?raw=true" width="500"/>
-
 ### ⭐ Reviews Page  
 <img src="https://github.com/Saniyagautam/WANDERLUST-FINAL/blob/main/public/images/Reviews%20Page.png?raw=true" width="500"/>
 
