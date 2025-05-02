@@ -9,7 +9,7 @@ Wanderlust is a full-stack hotel booking platform that allows users to search, r
 - 🔎 Search hotels and apply category-based filters (e.g., trending, beaches, mountains)  
 - ⭐ Leave reviews and ratings on hotels  
 - 💳 Payment processing integration  
-- 📱 Fully responsive design for all devices  
+- 📱 Fully responsive design for all devices
 
 ## 🛠️ **Technologies Used**
 
@@ -31,7 +31,6 @@ Wanderlust is a full-stack hotel booking platform that allows users to search, r
 
 ## ⚙️ **Installation**
 Clone the repository:  
-```bash
 git clone https://github.com/Saniyagautam/WANDERLUST-FINAL.git
 
 Install Dependencies
@@ -43,16 +42,29 @@ nodemon app.js
 Visit 
 http://localhost:8080
 
-## **Snapshots**
 
-## **Future Enhancements**
-- 🌐 Multi-language support
-- 🗺️ Map integration for property locations
-- 📧 Email confirmation and notifications
-- 🛎️ Advanced booking management for hosts
+## 🛠️ **Future Enhancements**
 
-## **👤 Author**
-Saniya Gautam
+**🌐 Multi-Language Support:**  
+- Implement multi-language options to make the platform accessible to a global audience.  
+
+**🗺️ Map Integration:**  
+- Integrate maps to show the exact location of listed properties, allowing users to easily explore hotels in specific areas.  
+
+**📧 Email Notifications:**  
+- Send confirmation emails upon booking, reservation changes, and host updates.  
+
+**💬 Real-Time Chat:**  
+- Allow users and hosts to communicate in real-time to address queries before making a booking.  
+
+**🔄 Booking Cancellation & Refunds:**  
+- Implement a system to allow users to cancel bookings with refund options based on the cancellation policy.  
+
+##**Snapshots**
+
+
+## 👤 **Author**
+**Name:** Saniya Gautam  
 
 
 
